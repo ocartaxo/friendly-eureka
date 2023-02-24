@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: ${PS_URL}
+    username: ${PS_USERNAME}
+    password: ${PS_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  flyway:
+    user: ${PS_USERNAME}
+    password: ${PS_PASSWORD}
+    url: ${PS_URL}
+api:
+  security:
+    jwk: 6D5970337336763979244226452948404D635166546A576E5A7234753777217A
+
